@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int t = input.nextInt();
+		int temp;
+		
+		for(int i=1; i<=t; i++) {
+			BigInteger a,b,ans;
+			a = input.nextBigInteger();
+			a = a.abs();
+			b = input.nextBigInteger();
+			b = b.abs();
+			ans = a.mod(b);
+			temp = ans.intValue();
+			if(temp==0) {
+				System.out.println("Case "+i+": "+"divisible");
+			}
+			else {
+				System.out.println("Case "+i+": "+"not divisible");
+			}
+		}
+		
+	}
+}
